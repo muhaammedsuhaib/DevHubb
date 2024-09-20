@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative bg-black text-white py-16 flex flex-col items-center justify-center bg-cover hero-section" 
+    class="relative bg-black text-white py-16 flex flex-col items-center justify-center bg-cover hero-section text-center" 
   >
     <!-- Hero Title -->
     <h1 class="text-4xl md:text-5xl font-bold uppercase hero-title tracking-wide">

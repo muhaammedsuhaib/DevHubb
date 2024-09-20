@@ -63,7 +63,7 @@ export default {
         {
           title: "Web Development",
           description: "Responsive design ensures websites look great on any device.",
-          image: "https://dev-hubb.vercel.app/img/project1.a0ec4030.png",
+          image: require('../assets/projects/project1.png'),
         }
       ],
     };
