@@ -1,41 +1,56 @@
 <template>
   <section class="relative bg-black text-white py-16 flex flex-col items-center justify-center portfolio-section">
-    <!-- Section Title -->
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase section-title tracking-wide">
-      Our <span class="text-gold">Portfolio</span>
-    </h1>
-    <!-- Section Subtitle -->
-    <p class="text-base md:text-lg lg:text-xl mt-4 text-center section-subtitle tracking-wide">
-      Showcasing Our Recent Projects
-    </p>
+    <!-- Button to toggle portfolio visibility -->
+    <button
+      v-if="!showPortfolio"
+      @click="togglePortfolio"
+      class="bg-gold text-black py-2 px-4 rounded hover:bg-opacity-80 transition-all mb-4"
+    >
+      Show Portfolio
+    </button>
 
-    <!-- Portfolio Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 portfolio-container">
-      <!-- Project Item -->
-      <div
-        v-for="(project, index) in projects"
-        :key="index"
-        class="portfolio-item relative overflow-hidden transition-transform transform hover:scale-105"
-      >
-        <img
-          :src="project.image"
-          :alt="`Project Image ${index + 1}`"
-          class="w-full h-48 object-cover"
-        />
+    <button
+      v-if="showPortfolio"
+      @click="togglePortfolio"
+      class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-500 transition-all mb-4"
+    >
+      Close Portfolio
+    </button>
+
+    <!-- Portfolio Section, only visible after clicking "Show" -->
+    <div v-if="showPortfolio" class="w-full">
+      <!-- Section Title -->
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase section-title tracking-wide text-center">
+        Our <span class="text-gold">Portfolio</span>
+      </h1>
+      <!-- Section Subtitle -->
+      <p class="text-base md:text-lg lg:text-xl mt-4 text-center section-subtitle tracking-wide">
+        Showcasing Our Recent Projects
+      </p>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 portfolio-container p-5">
+        <!-- Project Item -->
         <div
-          class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+          v-for="(project, index) in projects"
+          :key="index"
+          class="portfolio-item relative overflow-hidden transition-transform transform hover:scale-105"
         >
-          <div class="text-center text-white px-4">
+          <img
+            :src="project.image"
+            :alt="`Project Image ${index + 1}`"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out"
+          >
+            <div class="text-center text-white px-4"></div>
           </div>
+          <h3 class="text-lg md:text-xl font-bold mb-2">{{ project.title }}</h3>
+          <p class="text-sm md:text-base">{{ project.description }}</p>
         </div>
-            <h3 class="text-lg md:text-xl font-bold mb-2">{{ project.title }}</h3>
-            <p class="text-sm md:text-base">{{ project.description }}</p>
       </div>
     </div>
-
-
-    <!-- Optional Background Image -->
-    <div class="absolute inset-0 opacity-20 bg-cover bg-center bg-portfolio-image"></div>
   </section>
 </template>
 
@@ -43,17 +58,21 @@
 export default {
   data() {
     return {
+      showPortfolio: false, // Initially set to false to hide portfolio
       projects: [
         {
-          title: "Project Title 1",
-          description:
-            "Brief description of the project showcasing the key aspects and technologies used.",
-          image:
-            "https://muhaammedsuhaib.github.io/Front-end-Developer-portfolio/assets/imgs/avatar.jpg"
-        },
-      ]
+          title: "Web Development",
+          description: "Responsive design ensures websites look great on any device.",
+          image: "https://dev-hubb.vercel.app/img/project1.a0ec4030.png",
+        }
+      ],
     };
-  }
+  },
+  methods: {
+    togglePortfolio() {
+      this.showPortfolio = !this.showPortfolio; // Toggle the visibility
+    },
+  },
 };
 </script>
 
@@ -112,10 +131,7 @@ export default {
   z-index: 10;
 }
 
-/* Optional Background Image */
-.bg-portfolio-image {
-  background-image: url(""); /* Add your background image URL here */
-}
+
 
 /* Animations */
 @keyframes fadeInUp {

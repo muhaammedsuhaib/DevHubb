@@ -1,11 +1,12 @@
 <template>
   <section
-    class="relative bg-black text-white py-16 flex flex-col items-center justify-center hero-section"
+    class="relative bg-black text-white py-16 flex flex-col items-center justify-center bg-cover hero-section" 
   >
     <!-- Hero Title -->
     <h1 class="text-4xl md:text-5xl font-bold uppercase hero-title tracking-wide">
       DEVHUBB <span class="text-gold">Technology</span>
     </h1>
+
     <!-- Hero Subtitle -->
     <p class="text-lg md:text-xl mt-4 text-center hero-subtitle tracking-wide">
       Freelance Web Development for Modern & Scalable Solutions
@@ -21,88 +22,39 @@
 
     <!-- Technologies Section -->
     <div class="mt-12 flex flex-wrap justify-center space-x-4 sm:space-x-6 tech-icons">
-      <!-- HTML5 -->
-      <div class="tech-item text-center">
-        <i class="fab fa-html5 text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">HTML5</p>
-      </div>
-      <!-- CSS3 -->
-      <div class="tech-item text-center">
-        <i class="fab fa-css3-alt text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">CSS3</p>
-      </div>
-      <!-- JavaScript -->
-      <div class="tech-item text-center">
-        <i class="fab fa-js-square text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">JavaScript</p>
-      </div>
-      <!-- React -->
-      <div class="tech-item text-center">
-        <i class="fab fa-react text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">React</p>
-      </div>
-      <!-- Vue.js -->
-      <div class="tech-item text-center">
-        <i class="fab fa-vuejs text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Vue.js</p>
-      </div>
-      <!-- Angular -->
-      <div class="tech-item text-center">
-        <i class="fab fa-angular text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Angular</p>
-      </div>
-      <!-- Bootstrap -->
-      <div class="tech-item text-center">
-        <i class="fab fa-bootstrap text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Bootstrap</p>
-      </div>
-      <!-- Tailwind CSS -->
-      <div class="tech-item text-center">
-        <i class="fab fa-css3-alt text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Tailwind CSS</p>
-      </div>
-      <!-- Node.js -->
-      <div class="tech-item text-center">
-        <i class="fab fa-node text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Node.js</p>
-      </div>
-      <!-- Express.js -->
-      <div class="tech-item text-center">
-        <i class="fas fa-server text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Express.js</p>
-      </div>
-      <!-- NestJS -->
-      <div class="tech-item text-center">
-        <i class="fas fa-cube text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">NestJS</p>
-      </div>
-      <!-- MongoDB -->
-      <div class="tech-item text-center">
-        <i class="fas fa-database text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">MongoDB</p>
-      </div>
-      <!-- Git -->
-      <div class="tech-item text-center">
-        <i class="fab fa-git-alt text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">Git</p>
-      </div>
-      <!-- TypeScript -->
-      <div class="tech-item text-center">
-        <i class="fab fa-js-square text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">TypeScript</p>
-      </div>
-      <!-- SASS/SCSS -->
-      <div class="tech-item text-center">
-        <i class="fab fa-sass text-4xl sm:text-5xl hover:text-gold"></i>
-        <p class="text-xs sm:text-sm mt-2">SASS</p>
+      <div v-for="(tech, index) in technologies" :key="index" class="tech-item text-center hover:text-yellow-400" :style="{ animationDelay: tech.delay }">
+        <i :class="tech.icon" class="text-4xl sm:text-5xl transition-transform duration-300 hover:text-gold hover:scale-125"></i>
+        <p class="text-xs sm:text-sm mt-2 hover:scale-125">{{ tech.name }}</p>
       </div>
     </div>
-    <!-- Optional Hero Background Image -->
-    <div
-      class="absolute inset-0 opacity-20 bg-cover bg-center bg-hero-image"
-    ></div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      technologies: [
+        { name: "HTML5", icon: "fab fa-html5", delay: "1.2s" },
+        { name: "CSS3", icon: "fab fa-css3-alt", delay: "1.4s" },
+        { name: "JavaScript", icon: "fab fa-js-square", delay: "1.6s" },
+        { name: "React", icon: "fab fa-react", delay: "1.8s" },
+        { name: "Vue.js", icon: "fab fa-vuejs", delay: "2s" },
+        { name: "Angular", icon: "fab fa-angular", delay: "2.2s" },
+        { name: "Bootstrap", icon: "fab fa-bootstrap", delay: "2.4s" },
+        { name: "Tailwind CSS", icon: "fab fa-css3-alt", delay: "2.6s" },
+        { name: "Node.js", icon: "fab fa-node", delay: "2.8s" },
+        { name: "Express.js", icon: "fas fa-server", delay: "3s" },
+        { name: "NestJS", icon: "fas fa-cube", delay: "3.2s" },
+        { name: "MongoDB", icon: "fas fa-database", delay: "3.4s" },
+        { name: "Git", icon: "fab fa-git-alt", delay: "3.6s" },
+        { name: "TypeScript", icon: "fab fa-js-square", delay: "3.8s" },
+        { name: "SASS", icon: "fab fa-sass", delay: "4s" }
+      ]
+    };
+  }
+};
+</script>
 
 <style scoped>
 /* Primary Colors */
@@ -116,26 +68,27 @@
 /* Hero Section Styling */
 .hero-section {
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("../assets/bg-devhubb.png");
 }
 
 /* Hero Title Animation */
-.hero-title {
+.hero-title, .hero-subtitle, .cta-btn {
   opacity: 0;
-  animation: fadeInUp 1.5s ease-out forwards;
+  animation: fadeInUp ease-out forwards;
+}
+.hero-title {
+  animation-duration: 1.5s;
 }
 .hero-subtitle {
-  opacity: 0;
-  animation: fadeInUp 2s ease-out forwards;
+  animation-duration: 2s;
   animation-delay: 0.5s;
 }
 .cta-btn {
-  opacity: 0;
-  animation: fadeInUp 2.5s ease-out forwards;
+  animation-duration: 2.5s;
   animation-delay: 1s;
 }
 
@@ -143,62 +96,6 @@
 .tech-item {
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
-}
-.tech-icons div:nth-child(1) {
-  animation-delay: 1.2s;
-}
-.tech-icons div:nth-child(2) {
-  animation-delay: 1.4s;
-}
-.tech-icons div:nth-child(3) {
-  animation-delay: 1.6s;
-}
-.tech-icons div:nth-child(4) {
-  animation-delay: 1.8s;
-}
-.tech-icons div:nth-child(5) {
-  animation-delay: 2s;
-}
-.tech-icons div:nth-child(6) {
-  animation-delay: 2.2s;
-}
-.tech-icons div:nth-child(7) {
-  animation-delay: 2.4s;
-}
-.tech-icons div:nth-child(8) {
-  animation-delay: 2.6s;
-}
-.tech-icons div:nth-child(9) {
-  animation-delay: 2.8s;
-}
-.tech-icons div:nth-child(10) {
-  animation-delay: 3s;
-}
-.tech-icons div:nth-child(11) {
-  animation-delay: 3.2s;
-}
-.tech-icons div:nth-child(12) {
-  animation-delay: 3.4s;
-}
-.tech-icons div:nth-child(13) {
-  animation-delay: 3.6s;
-}
-.tech-icons div:nth-child(14) {
-  animation-delay: 3.8s;
-}
-.tech-icons div:nth-child(15) {
-  animation-delay: 4s;
-}
-
-/* Contact Info Animation */
-.contact-info {
-  opacity: 0;
-  animation: fadeInUp 2.5s ease-out forwards;
-  animation-delay: 1.5s;
-}
-
-.bg-hero-image {
-  background-image: url("");
 }
 
 /* Animations */

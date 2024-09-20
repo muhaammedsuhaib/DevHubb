@@ -1,8 +1,8 @@
 <template>
-  <section class="relative bg-black text-white py-16 flex flex-col items-center justify-center portfolio-section">
+  <section id="contact" class="relative bg-black text-white py-16 flex flex-col items-center justify-center portfolio-section">
     <!-- Section Title -->
     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase section-title tracking-wide">
-      Contact Us
+      Contact <span class="text-gold">Us</span>
     </h1>
     <!-- Section Subtitle -->
     <p class="text-base md:text-lg lg:text-xl mt-4 text-center section-subtitle tracking-wide">
@@ -12,7 +12,7 @@
     <!-- Contact Info and Form Container -->
     <div class="mt-8 w-full max-w-7xl flex flex-col-reverse lg:flex-row justify-center gap-8 px-4">
       <!-- Form -->
-      <form @submit.prevent="submitForm" id="contact-form" class="flex-1 w-full max-w-md px-4">
+      <form @submit.prevent="submitForm" id="contact-form" class="flex-1 w-full max-w-md px-4  flex flex-col space-y-6 p-6 bg-gray-900 rounded-lg shadow-lg">
         <!-- Name Field -->
         <div class="mb-4">
           <label for="name" class="block text-sm font-medium text-white">Name</label>
@@ -71,42 +71,45 @@
       </form>
       
       <!-- Contact Info -->
-      <div class="flex-1 flex flex-col items-center text-center lg:text-left space-y-6">
-        <!-- Phone -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fas fa-phone-alt text-xl"></i>
-          <a href="tel:7306890297" class="hover:underline">7306890297</a>
-        </div>
-        <!-- Email -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fas fa-envelope text-xl"></i>
-          <a href="mailto:devhubb0@gmail.com" class="hover:underline">devhubb0@gmail.com</a>
-        </div>
-        <!-- WhatsApp -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fab fa-whatsapp text-xl"></i>
-          <a href="https://wa.me/7306890297" target="_blank" rel="noopener noreferrer" class="hover:underline">
-            WhatsApp
-          </a>
-        </div>
-        <!-- Address -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fas fa-map-marker-alt text-xl"></i>
-          <span>Malappuram, Kerala, PIN 679582</span>
-        </div>
-        <!-- Office Hours -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fas fa-clock text-xl"></i>
-          <span>Available: Mon-Fri, 9:00 AM - 6:00 PM</span>
-        </div>
-        <!-- LinkedIn -->
-        <div class="flex items-center text-gold">
-          <i class="mr-2 fab fa-linkedin text-xl"></i>
-          <a href="https://www.linkedin.com/company/devhubb-technology" target="_blank" rel="noopener noreferrer" class="hover:underline">
-            LinkedIn
-          </a>
-        </div>
-      </div>
+<div class="flex-1 flex flex-col space-y-6 p-6 bg-gray-900 rounded-lg shadow-lg">
+  <!-- Phone -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fas fa-phone-alt text-xl"></i>
+    <a href="tel:7306890297" class="hover:underline">7306890297</a>
+  </div>
+  <!-- Email -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fas fa-envelope text-xl"></i>
+    <a href="mailto:devhubb0@gmail.com" class="hover:underline">devhubb0@gmail.com</a>
+  </div>
+  <!-- WhatsApp -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fab fa-whatsapp text-xl"></i>
+    <a href="https://wa.me/7306890297" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      WhatsApp
+    </a>
+  </div>
+  <!-- Address -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fas fa-map-marker-alt text-xl"></i>
+     <a href="https://maps.app.goo.gl/DtZtjrksFHy18qSs8" target="_blank" rel="noopener noreferrer" class="hover:underline">
+    <span>Malappuram, Kerala, PIN 679582</span>
+    </a>
+  </div>
+  <!-- Office Hours -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fas fa-clock text-xl"></i>
+    <span>Available: Mon-Fri, 9:00 AM - 6:00 PM</span>
+  </div>
+  <!-- LinkedIn -->
+  <div class="flex items-center text-gold space-x-2">
+    <i class="fab fa-linkedin text-xl"></i>
+    <a href="https://www.linkedin.com/in/dev-hub-technology-50654732a/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+      LinkedIn
+    </a>
+  </div>
+</div>
+
     </div>
   </section>
 </template>

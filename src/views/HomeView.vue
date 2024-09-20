@@ -5,6 +5,7 @@
     <Services />
     <Portfolio />
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Hero from '@/components/HeroPage.vue'
 import Services from '@/components/ServicesPage.vue'
 import Portfolio from '@/components/PortfolioPage.vue'
 import Contact from '@/components/ContactPage.vue'
+import Footer from '@/components/FooterPage.vue'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     Services,
     Portfolio,
     Contact,
+    Footer
   },
 }
 </script>
