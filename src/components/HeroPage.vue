@@ -44,11 +44,11 @@ export default {
         { name: "Bootstrap", icon: "fab fa-bootstrap", delay: "2.4s" },
         { name: "Tailwind CSS", icon: "fab fa-css3-alt", delay: "2.6s" },
         { name: "Node.js", icon: "fab fa-node", delay: "2.8s" },
-        { name: "Express.js", icon: "fas fa-server", delay: "3s" },
-        { name: "NestJS", icon: "fas fa-cube", delay: "3.2s" },
+        // { name: "Express.js", icon: "fas fa-server", delay: "3s" },
+        // { name: "NestJS", icon: "fas fa-cube", delay: "3.2s" },
         { name: "MongoDB", icon: "fas fa-database", delay: "3.4s" },
         { name: "Git", icon: "fab fa-git-alt", delay: "3.6s" },
-        { name: "TypeScript", icon: "fab fa-js-square", delay: "3.8s" },
+        // { name: "TypeScript", icon: "fab fa-js-square", delay: "3.8s" },
         { name: "SASS", icon: "fab fa-sass", delay: "4s" }
       ]
     };
