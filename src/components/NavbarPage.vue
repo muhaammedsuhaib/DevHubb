@@ -13,8 +13,8 @@
       </div>
       <!-- Navbar Links -->
       <div class="flex items-center space-x-4 ml-auto">
-        <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-gold nav-link" href="https://www.facebook.com/profile.php?id=100073352894286">
-          <i class="fab fa-facebook-square text-lg leading-lg"></i>
+        <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-gold nav-link" href="https://www.linkedin.com/company/devhubb-technology/">
+          <i class="fab fa-linkedin-in text-lg leading-lg"></i>
         </a>
         <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:text-gold nav-link" href="https://x.com/MuhaammedSuhaib">
           <i class="fab fa-twitter text-lg leading-lg"></i>

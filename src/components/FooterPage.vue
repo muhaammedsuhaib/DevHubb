@@ -14,6 +14,9 @@
         <a href="https://www.instagram.com/devhu.bb?igsh=MTA4YzhyMnlmcGcxdQ==" class="social-icon" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
+        <a href="https://github.com/muhaammedsuhaib" class="social-icon" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
       <p class="text-xs md:text-sm copyright">
         &copy; 2024 DEVHUBB Technology. All Rights Reserved.
