@@ -104,7 +104,7 @@
   <!-- LinkedIn -->
   <div class="flex items-center text-gold space-x-2">
     <i class="fab fa-linkedin text-xl"></i>
-    <a href="https://www.linkedin.com/in/dev-hub-technology-50654732a/" target="_blank" rel="noopener noreferrer" class="hover:underline">
+    <a href="https://www.linkedin.com/company/devhubb-technology/" target="_blank" rel="noopener noreferrer" class="hover:underline">
       LinkedIn
     </a>
   </div>

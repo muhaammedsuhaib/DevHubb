@@ -8,7 +8,7 @@
         <a href="https://www.facebook.com/profile.php?id=100073352894286" class="social-icon" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://www.linkedin.com/in/dev-hub-technology-50654732a/" class="social-icon" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/devhubb-technology/" class="social-icon" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
         <a href="https://www.instagram.com/devhu.bb?igsh=MTA4YzhyMnlmcGcxdQ==" class="social-icon" aria-label="Instagram">
